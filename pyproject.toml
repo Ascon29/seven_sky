@@ -1,0 +1,25 @@
+[project]
+name = "seven-sky"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Виктор Бугай",email = "ascon2913@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "django (>=5.2,<6.0)",
+    "python-telegram-bot (>=22.0,<23.0)",
+    "python-dotenv (>=1.1.0,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.lint.dependencies]
+black = "^25.1.0"
+flake8 = "^7.2.0"
+isort = "^6.0.1"
+
