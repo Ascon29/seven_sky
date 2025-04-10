@@ -9,7 +9,6 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "django (>=5.2,<6.0)",
-    "python-telegram-bot (>=22.0,<23.0)",
     "python-dotenv (>=1.1.0,<2.0.0)"
 ]
 
@@ -23,3 +22,22 @@ black = "^25.1.0"
 flake8 = "^7.2.0"
 isort = "^6.0.1"
 
+[tool.black]
+# Максимальная длина строки
+line-length = 119
+# Файлы, которые не нужно форматировать
+exclude = '''
+(
+  /(
+      \.eggs         # Исключить несколько общих каталогов
+    | \.git          # в корне проекта
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | dist
+  )/
+  | foo.py           # Также отдельно исключить файл с именем foo.py
+                     # в корне проекта
+)
+'''
